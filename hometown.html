@@ -55,11 +55,7 @@
     <div id="container" style="width:809px; height:500px"></div>
 
     <script>
-        destroyed(){
-            if(!!this.map){
-                this.map.destroy();
-            }
-        }
+        
         //对于地图的自定义，属性有很多，只列举三个
         var map = new AMap.Map('container', {
             resizeEnable: true,
@@ -67,6 +63,11 @@
             center: [112.73, 38.42],//地图显示中心点坐标，如果没有center属性，则会定位到你当前所处的位置
             viewMode: '3D'//使用3D视图
         });
+        destroyed(){
+            if(!!this.map){
+                this.map.destroy();
+            }
+        }
         var marker = new AMap.Marker({
             icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png",
             position: [112.73, 38.42],
