@@ -58,6 +58,7 @@
 
         //对于地图的自定义，属性有很多，只列举三个
         var map = new AMap.Map('container', {
+            resizeEnable: true,
             zoom: 6,//缩放级别
             center: [112.73, 38.42],//地图显示中心点坐标，如果没有center属性，则会定位到你当前所处的位置
             viewMode: '3D'//使用3D视图
