@@ -55,7 +55,11 @@
     <div id="container" style="width:809px; height:500px"></div>
 
     <script>
-
+        destroyed(){
+            if(!!this.map){
+                this.map.destroy();
+            }
+        }
         //对于地图的自定义，属性有很多，只列举三个
         var map = new AMap.Map('container', {
             resizeEnable: true,
